@@ -1,0 +1,595 @@
+-- MySQL dump 10.13  Distrib 5.1.41, for debian-linux-gnu (i486)
+--
+-- Host: localhost    Database: inventory
+-- ------------------------------------------------------
+-- Server version	5.1.41-3ubuntu12.10
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `Calcium_calibration`
+--
+
+DROP TABLE IF EXISTS `Calcium_calibration`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Calcium_calibration` (
+  `ID` int(11) NOT NULL,
+  `Cal_0(water)_OD` float NOT NULL,
+  `Cal_2_value_mg_per_dl` float NOT NULL,
+  `Cal_2_OD` float NOT NULL,
+  `Cal_3_value_mg_per_dl` float NOT NULL,
+  `Cal_3_OD` float NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Calcium_calibration`
+--
+
+LOCK TABLES `Calcium_calibration` WRITE;
+/*!40000 ALTER TABLE `Calcium_calibration` DISABLE KEYS */;
+INSERT INTO `Calcium_calibration` VALUES (11071409,0.4114,9.74,0.9393,12.5,1.0899),(11071416,0.3916,9.74,0.8057,12.5,0.93),(11071509,0.4444,9.74,0.9442,12.5,1.1013),(211071609,0.4551,9.74,0.9653,12.5,1.0943),(11071609,0.4551,9.74,0.9653,12.5,1.0943),(11071618,0.4159,9.74,0.8144,12.5,0.9249),(11071809,0.5014,9.74,1.0081,12.5,1.1362),(11071816,0.4665,9.74,0.9061,12.5,1.0218),(11071909,0.4873,9.74,0.979,12.5,1.0971),(11072009,0.5149,9.74,1.0064,12.5,1.1271),(11172109,0.4762,9.74,0.9531,12.5,1.0546),(11072210,0.4675,9.74,0.9772,12.5,1.0526),(11072309,0.4493,9.74,0.974,12.5,1.0274),(11072409,0.4555,9.74,0.9345,12.5,1.084),(11072509,0.4637,9.74,0.9154,12.5,1.0957),(11072609,0.4069,9.74,0.7362,12.5,0.8348),(11072617,0.3916,9.74,0.672,12.5,0.7664),(11072709,0.4843,9.74,0.9552,12.5,1.0667),(11072809,0.4795,9.74,0.9518,12.5,1.0913),(11072817,0.4376,9.74,0.8118,12.5,0.9139),(11072917,0.4299,9.74,0.7892,12.5,0.9064),(11072909,0.4797,9.74,0.9598,12.5,1.0774),(11073016,0.5366,9.74,0.9568,12.5,1.0651),(11073009,0.4792,9.74,0.9473,12.5,1.054),(11073109,0.6046,9.74,1.0249,12.5,1.1204),(11073118,0.4851,9.74,0.8731,12.5,0.9649),(11080210,0.4988,9.74,0.9902,12.5,1.1195),(11080317,0.5323,9.74,0.8084,12.5,0.9077),(11080310,0.4869,9.74,0.9606,12.5,1.0914),(11080410,0.6519,9.74,0.9579,12.5,1.1082),(11080417,0.6063,9.74,0.9443,12.5,1.0743),(11080817,0.4462,9.74,0.9717,12.5,0.8746),(11080910,0.7166,9.74,1.07,12.5,1.1948),(11080918,0.1707,9.74,0.6388,12.5,0.7555),(11081010,0.2064,9.74,0.6588,12.5,0.7717),(11081017,0.1777,9.74,0.5029,12.5,0.6043),(11081110,0.1785,9.74,0.6473,12.5,0.7699),(11081118,0.3121,9.74,0.6434,12.5,0.7692),(11081211,0.3378,9.74,0.6525,12.5,0.7697),(11081216,0.1639,9.74,0.5578,12.5,0.6841),(11081309,0.1829,9.74,0.6275,12.5,0.7613),(11081316,0.1818,9.74,0.6241,12.5,0.7474),(11081409,0.1871,9.74,0.6125,12.5,0.7576),(11081417,0.1973,9.74,0.6429,12.5,0.7841),(11081509,0.2277,9.74,0.6382,12.5,0.7565),(11081517,0.1512,9.74,0.5109,12.5,0.6);
+/*!40000 ALTER TABLE `Calcium_calibration` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Date_of_entry`
+--
+
+DROP TABLE IF EXISTS `Date_of_entry`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Date_of_entry` (
+  `Date_of_entry` date NOT NULL,
+  PRIMARY KEY (`Date_of_entry`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Date_of_entry`
+--
+
+LOCK TABLES `Date_of_entry` WRITE;
+/*!40000 ALTER TABLE `Date_of_entry` DISABLE KEYS */;
+INSERT INTO `Date_of_entry` VALUES ('0000-00-00'),('2011-07-11'),('2011-07-12'),('2011-07-13'),('2011-07-14'),('2011-07-15'),('2011-07-16'),('2011-07-17'),('2011-07-18'),('2011-07-19'),('2011-07-20'),('2011-07-21'),('2011-07-22'),('2011-07-23'),('2011-07-24'),('2011-07-25'),('2011-07-26'),('2011-07-27'),('2011-07-28'),('2011-07-29'),('2011-07-30'),('2011-07-31'),('2011-08-01'),('2011-08-02'),('2011-08-03'),('2011-08-04'),('2011-08-05'),('2011-08-06'),('2011-08-07'),('2011-08-08'),('2011-08-09'),('2011-08-10'),('2011-08-11'),('2011-08-12'),('2011-08-13'),('2011-08-14'),('2011-08-15'),('2011-08-16'),('2011-08-17'),('2011-08-18'),('2011-08-19'),('2011-08-20'),('2011-08-21'),('2011-08-22'),('2011-08-23'),('2011-08-24'),('2011-08-25'),('2011-08-26'),('2011-08-27'),('2011-08-28'),('2011-08-29'),('2011-08-30'),('2011-08-31');
+/*!40000 ALTER TABLE `Date_of_entry` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Nonconformity_Records`
+--
+
+DROP TABLE IF EXISTS `Nonconformity_Records`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Nonconformity_Records` (
+  `Nonconformity_ID` int(5) NOT NULL,
+  `Description` varchar(1000) NOT NULL,
+  `Location_of_detailed_report` varchar(200) NOT NULL,
+  PRIMARY KEY (`Nonconformity_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Nonconformity_Records`
+--
+
+LOCK TABLES `Nonconformity_Records` WRITE;
+/*!40000 ALTER TABLE `Nonconformity_Records` DISABLE KEYS */;
+INSERT INTO `Nonconformity_Records` VALUES (20101,'result of Feb 2010 EQA(vellore ,riqas ) are grossly errorneous  ','NA'),(20102,'muira-300 not working properly Since 10-02-2010 and since april 2010 is completely shutdown','NA'),(2011001,'Failure to check Quality of Reagent When put in 1st use(Glucose reagent)','NA'),(2011002,'QC Exchanged','NA'),(11073031,'k-32.4,sample ID-8961 & K-45.50,SAMPLE ID-8977.RESULT IS OUT OF REPORTABLE RANGE,NOT SEEN IN LIVE PERSON,SAMPLE MAY BE CONTAMINATED.CONCERN RESIDENT WAS INFORMED & ASKED FOR REPEATE SAMPLE.PREVENTION-TRAINING OF SAMPLE COLLECTION & PRE ANALYTICAL ERROR',''),(2011003,'Result of ALT were not obtained in XL-640.\r\nReagent was kept at wrong place. Mistake in reading signs reagent wheel. ','NA'),(2011004,'Bilirubin in QC was done five times in QC(Morning). Wrong data in method programming. Change after QC check of new Bilirubn Reagetn was not reversed','NA'),(2011005,'MORNING QC FOR UA HAD 1(3S) RULE BROKEN FOR XL-640.REASON-ONLY R1 WAS ADDED TO REAGENT BOTTLE DURING REFILING.LACK OF TRAINING TO JUNIOR RESIDENTS WAS THE CAUSE. Wrong language was used in WDI','NA'),(2011006,'forget to switch off deionised water plant,so water come out from deionisedwater tank,purchage of liquid level detector with alarm is required','NA'),(2011007,'probe is crushed by eppendrop cup in erba xl-640, reason-its happened due to forget removing the cap of eppendrop, due to lack of training of residents.','NA'),(2011008,'water is poured out around AC in lab. reason-this occur due to im-proper fitting in pipes of AC by AC fitter, due to lack of observation during fitting of AC pipe.','NA'),(2011009,'ONLY R1 of TG WAS ADDED TO REAGENT BOTTLE DURING REFILING of reagent in erba.beacause of Wrong language was used in WDI,no effect of nc on result beacuse thre were no TG tests on erba.','NA'),(2011010,'There was error \"clot is detected at position no-\" in erba xl-640 during running of sample.Reason- due to fibrin clot present in sample,due to early centrifuge of sample before conversion of fibrinogen to fibrin.PREVENTION- centrifuge of sample 1 hr after receiving.','NA'),(2011011,'There was error\"clot is detected at sample id no-6303\" in erba xl-640 during running of sample.  Vacuttee-short, HEMODILYSIS UNIT.PREVENTION- centrifuge of sample 1 hr after receiving.','NA'),(2011012,'Delay in work in the lab. Reason- due to technician are on strike for salary increament, Because contrctor is not given increament to technician.','NA'),(2011013,'there was error\"clot is detected at sample id no-6358\" in erba xl-640 during running of sample. pt.-->hepatic encephalopathy, Rx-->vit.k.','NA\r\n'),(2011014,'there was error\"clot is detected at sample no-102435\" in erba xl-640 during running of sample. Vacuttee-short, Prevention->in remark--write \r\n\'delay clotting\'','NA'),(201115,'there was error\"clot is detected at sample no-102333\" in erba xl-640 during running of sample.Vacuttee-5ml,Prevention->in remark--write \r\n\'delay clotting\'\r\n','NA'),(2011017,'Turn around time for ward samples(id no.-6570,6572,6586,6686,6688,6690,6692,6694,6720,6723,6726,6730,6732,6734,6736,6737,6739,6837,6839,6841)were more than 4 hrs.on 22/07/2011.because of over workload ','NA'),(2011016,'there was error\"clot is detected at sample no-6973\" in erba xl-640 during running of sample.Vacuttee-5ml,Diagnosis-CRF,  ','NA'),(2011018,'Turn around time for ward samples(id no.-6419,6450)were more than 4 hrs.on 21/07/2011.due to high result repeat is given twice.','NA'),(2011019,'There was error\"clot is detected at sample id no-7344\" in erba xl-640 during running of sample. Vacuttee-long, Pt. --> suspected dangue, h/o low platelet count.','NA'),(2011020,'Turn around time for ward samples(id no.-7265)was more than 4 hrs.on 24/07/2011.','NA'),(2011021,'There was error\"clot is detected at sample id no-7454\" in erba xl-640 during running of sample. Vacuttee-long, HEMODILYSIS UNIT.PREVENTION- centrifuge of sample 1 hr after receiving.','NA'),(201107022,'Turn around time for ward samples(id no.-7357,7361)were more than 4 hrs.on 25/07/2011.due to high result repeat is given twice.','NA'),(2011023,'	Turn around time for ward samples(id no.-7865)were more than 4 hrs.on 26/07/2011.due to more examinations are added in work list after sample receiving. ','NA'),(2011024,'there was error\"clot is detected at sample id no-8069(suspected malignancy),8100,102891(ART),102896(medicine),102904(ART)\" in erba xl-640 during running of samples. All vacuttee-long','NA'),(2011025,'Turn around time for ward samples(id no.-8329,8330,8332,8334,8351)were more than 4 hrs.on 27/07/2011.All samples r from lepto ward.','NA'),(2011026,'Delay in work due to Problem in log in to server. Reason-->some switch in key board of server computer are not working properly. Action-->replace key board with new one.','NA'),(2011028,'Nonconfermity:\r\nProlyte results are unacceptable.\r\nReason: \r\nresult of Prolyte are not matching with result of Erba xl.\r\nAction taken:\r\nEquipment is put out of use currently till problem is solved\r\nCompany engineer is informed.\r\n','NCHSLS/c/001 Biochemistry/documents/Records/009 Internal Quality Control Records/NC(2011028) OF ELECTROLYTES\r\n'),(2011027,'Turn around time for ward samples(id no.-8300,8348)were more than 4 hrs.on 28/07/2011.All samples r from lepto ward.','NA'),(2011029,'NC:\r\nGlucose-4280 mg/dl,albumin-1.9 ,total protein:2.9 in sample id-8661\r\nReason:\r\nglucose result beyond reportable range,such result are usually not seen in live person.\r\nresult of total protein and albumin are also low.\r\nsample seems to be contaminated(may be taken directly from IV line)\r\nAction Taken:\r\nconcern resident informed on phone to repeat the sample\r\nPrevention:\r\narranged proper training of sample collection.','NA'),(201130,'NC:\r\nk+ :31.50 reult in sample id 8749\r\nReason:\r\nk+ result beyond reportable range,such result are usually not seen in live person.\r\nsample seems to be contaminated(may be transferred from EDTA vacuttee)\r\nAction Taken:\r\nconcern resident informed on phone to repeat the sample\r\nPrevention:\r\narranged proper training of sample collection.','NA'),(2011031,'k-8961,sample ID-8961,k-8977 sample Id-8977.result is beyond reportable range.not seen in live person.sample may be contaminated.action taken-concern resident was informed,asked for repeat sample,prevention-arrange training of sample collection.',''),(2011032,'Non Conformity:\r\nResult of DBIL and TBIL were wrong on date 02-08-2011.\r\nREASON:\r\nresident doctor was calibrating DBIL and TBIL.but after calibration they forgot to change the FACTOR, decimal digit and No. of sample replicate.\r\nACTION TAKEN:\r\nBefore dispatching the result, we had manually calculated the result by multiplying the OD with FACTOR.\r\nPREVENTION:\r\n1)1st year resident were explain the whole method of calibration again, \r\n2)It was decided to put a notice on the screen of the monitor while calibration is going on.\r\n3)also it was decided to make a list of things to be done before starting calibration and on complition of calibration.','NA'),(110803,'Turn around time for ward samples(id no.-384)were more than 4 hrs.on 03/08/2011.SAMPLE-->CA++','NA'),(11080302,'There was error\"clot is detected at sample id no-738\" in erba xl-640 during running of sample.\r\nVACUTTEE-long, \r\nDIAGNOSIS-SUSPECTED ANGINA ,\r\nPT IS ON LMW HEPARIN.\r\nPREVENTION- centrifuge of sample 1 hr after receiving.','NA'),(11080303,'NC:\r\nTbill result in report are wrong.\r\nbcz Tbill results are more than Dbill.\r\nREASON:\r\nFactor for Tbill wrote wrong place after callibration of Tbill.\r\nACTION TAKEN:\r\nFactor wrote at right place. Then withdraw all resuls and we calculate result manually,then redispatched all results.','NA'),(11080401,'NC:\r\nThere was error\"clot is detected at sample id no-756,757,758,920,973,992,994\" in erba xl-640 during running of sample. \r\nREASON:\r\n756,757,758-->lepto. ward, pt. on vit-k, \r\n920-->MICU(altered consciousness),  \r\n973-->MI(pt. on anticoagulant),\r\n992-->Hemorragic pancriatitis,\r\n994-->cellulitis with hepatic encephalopathy(pt. on heparin)\r\nPREVENTION- centrifuge of sample 1 hr after receivin','NA'),(11080402,'NON-CONFORMITY:\r\nTurn around time for ward samples(id no.-928,997,1026,1028,1029)were more than 4 hrs on 03/08/2011.\r\nREASON:\r\nMachine work was broken down for 4-5 hrs due to continuous clot detection by Erba XL-640.\r\nACTION TAKEN:\r\nRe-centrifuge samples and repeat samples after clot removal.  ','NA'),(11080403,'NC:\r\nCritical-value of samples id no.-751,752,753,767,804,813,845,851,869,883,905,914,919,942,945,949,975,978,987,989    were not informed by fault. \r\nREASON:\r\nBy fault.\r\nACTION TAKEN:\r\nInformed the critical value which r not dispatched in results.\r\nPREVENTION:\r\nAfter completion of batch in machine, immediately inform the critical value of this batch by seeing in critical alert option. ','NA'),(11080404,'NC:\r\nQC Results are not seen in QC comment bar after export the Qc results of MIURA on date 04/08/2011.\r\nREASON:\r\nIt\'s due to QC id was entered wrong by fault.\r\nACTION TAKEN:\r\nWe manually edit the QC results after noting results on paper from MIURA memory files.','NA'),(2011080405,'NC:\r\nTemp of refrigerator id not maintained in range of 2-8\'c.\r\nREASON:\r\nsomebody is switching off the freeze.\r\nACTION TAKEN:\r\nswitch on the refrigerator again.\r\n\r\n','NA'),(2011080406,'NC:\r\nThere was error\"clot is detected at sample id no-1284\" in erba xl-640 during running of samples. vacuttee-long\r\npatient: hemodialysis unit','NA\r\n'),(11080501,'NON-CONFORMITY: \r\nTurn around time for ward samples(id no.-1083,1086)were more than 4 hrs on 04/08/2011. \r\nREASON: \r\nsample for electrolyte was put late in analyser.\r\n\r\n ','NA'),(11080502,'NC:\r\n Critical-value of samples id no.-1317,1370 were not informed by fault. \r\nREASON:\r\nBy fault. \r\nACTION TAKEN: \r\nInformed the critical value which r not dispatched in results. \r\nPREVENTION: \r\nAfter completion of batch in machine, immediately inform the critical value of this batch by seeing in critical alert option. ','NA'),(11080503,'NC:\r\nThere was error\"clot is detected at sample id no-1284\" in erba xl-640 during running of samples. \r\nvacuttee-long, \r\nDIDNOSIS:\r\nVIRAL ENCEPHALITIS-- SUSPECTED DENGUE MICU unit','NA'),(11080504,'NC:\r\n There was error\"clot is detected at sample id no-1700\" in erba xl-640 during running of samples. \r\npatient:\r\ndiagnosis--CRF, pt. on hemodialysis ','NA'),(11080601,'NC:\r\n There was error\"clot is detected at sample id no-1757,1770\" in erba xl-640 during running of samples.\r\npatient diagnosis--\r\n1757--DM with HT, 1770-- Head injury','NA'),(11080602,'NON-CONFORMITY:\r\n Turn around time for ward sample id no.1509-were more than 4 hrs on 04/08/2011.\r\nREASON:\r\n sample for electrolyte was put late in analyser. ','NA'),(11080701,'NC: \r\nThere was error\"clot is detected at sample id no-2240,2121,2241,2246\" in erba xl-640 during running of samples. \r\nDIDNOSIS:\r\n2240--RTA with deglowing,\r\n2121,2241--LAPTO. ward pt.\r\n2246--BURNS WARD PT.','NA'),(11080702,'NON-CONFORMITY:\r\nTurn around time for ward samples id no.-2017,2023,2025,2026,2027,2028,2029,2030,2105,2114,2233,2234,2285,2286were more than 4 hrs on 07/08/2011.\r\nREASON:\r\nsamples put late in analyser after receiving.','NA'),(11080801,'NC: \r\nCritical-value of samples id no.-2267,2276,2277 were not informed by fault.\r\nREASON: \r\nBy fault. \r\nACTION TAKEN: \r\nInformed the critical value which r not dispatched in results. \r\nPREVENTION: \r\nAfter completion of batch in machine, immediately inform the critical value of this batch by seeing in critical alert option. ','NA'),(11080802,'NC:\r\nINTERNAL QC of ALT is out of 4SD on date 8/8/11.\r\nREASON:\r\nDue to improper mixing of reagent.\r\nIN Erba machine ALT reagents, R1 and R2 are mixed before use. BUT on this day, Only R1 is added directly in to Erba reagent bottle by fault.\r\nACTION TAKEN:\r\nReagent bottle washed and add mixed R1 and R2 reagent. Samples put with QC, are re-run for ALT examination.  ','NA'),(11080901,'NC: \r\nThere was error\"clot is detected at sample id no-2449,2450,2451,2453,2506,2514\" in erba xl-640 during running of samples.\r\nREASON:\r\n2449,2450,2451,2453-->Hemodialysis unit,\r\n2506-->Lepto ward,\r\n2514-->ARF with obs. nueropathy\r\nACTION TAKEN:\r\nRE-Run the samples after Recentrifuge.\r\nthere was no clot after this.\r\n','NA'),(11080902,'NON-CONFORMITY:\r\nTurn around time for ward samples id no.--2325,2372,2375,2396,2450,2451,2453,2686,2687,2688-were more than 4 hrs on 09/08/2011. REASON:\r\nMachine work was broken down for 4-5 hrs due to continuous clot detection by Erba XL-640.\r\nACTION TAKEN: \r\nRe-centrifuge samples and repeat samples after clot removal. \r\nPREVENTION:\r\nCentrifuge of samples 1 hr after receiving.','NA'),(11081001,'NC: \r\nThere was error\"clot is detected at sample id no-2794,2796,2800\" in erba xl-640 during running of samples. REASON:\r\n2794,2796-->Hemodialysis unit, 2800-->pt. of leptospirosis,\r\nACTION TAKEN: \r\nRE-Run the samples after Recentrifuge. there was no clot after this. ','NA'),(11081002,'NC: \r\nNON-CONFORMITY: Turn around time for ward samples id no.--2875,2876,2877,2879,2882,2884,2885,2886,2888,2890,2892 were more than 4 hrs on 10/08/2011.\r\nREASON:\r\nsamples for examination in Erba was put late. \r\nPREVENTION:\r\nput samples for examinations in analyser within 4 hrs.','NA'),(11081101,'NC:\r\nThere was error\"clot is detected at sample id no-3222,3319\" in erba xl-640 during running of samples.\r\nREASON: \r\n3222--pt. have liver abscess.\r\n3319--p.falciparum with jaundice.\r\nACTION TAKEN: \r\nRE-Run the samples after Recentrifuge. there was no clot after this in 3319 sample.\r\nIN sample 3222--QNS, so remove the clot and re-run sample. ','NA'),(11081201,'NON-CONFORMITY:\r\nTurn around time for ward samples id no.--3319,3333,3345,3346,3347 were more than 4 hrs on 10/08/2011. \r\nREASON: \r\nsample-3319-->more examinarions were added in worklist after sample receiving.\r\nsamples-3333,3345,3346,3347-->reagent was empty during run and it took some times for melting and filling reagent.\r\nPREVENTION: \r\nput samples for examinations in analyser within 4 hrs.','NA'),(11081202,'NC:\r\nThere was error\"clot is detected at sample id no-3646\" in erba xl-640 during running of samples. \r\nREASON: \r\n3646--convulsion under investigation. ACTION TAKEN: \r\nRE-Run the samples after Recentrifuge. \r\n ','NA'),(11081301,'NON-CONFORMITY:\r\nTurn around time for ward samples id no.-3822,3889,3950,3975 were more than 4 hrs on 07/08/2011. \r\nREASON:\r\nsamples put late in analyser after receiving.\r\nPREVENTION:\r\nput samples in analyser within 4 hrs.\r\n','NA'),(11081501,'NON-CONFORMITY:\r\nMis-managing of ALT,CK-MB and UREA.\r\nREASON:\r\nALT & CK-MB-->R1 and R2 reagnt were separately used. so, R2 was used and R1 bottles remain behind in compair to R2 bottles.\r\n\r\n',''),(0,'4330 CLOT EVEN AFTER 2 TIME CENTRIFUGATION\r\n','');
+/*!40000 ALTER TABLE `Nonconformity_Records` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `_YYYY_MM_environmental_parameters`
+--
+
+DROP TABLE IF EXISTS `_YYYY_MM_environmental_parameters`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `_YYYY_MM_environmental_parameters` (
+  `f0` int(11) NOT NULL AUTO_INCREMENT,
+  `f1` varchar(50) NOT NULL,
+  `f2` varchar(50) NOT NULL,
+  `f3` varchar(50) NOT NULL,
+  `f4` varchar(50) NOT NULL,
+  `f5` varchar(50) NOT NULL,
+  `f6` varchar(50) NOT NULL,
+  `f7` varchar(50) NOT NULL,
+  `f8` varchar(50) NOT NULL,
+  `f9` varchar(50) NOT NULL,
+  `f10` varchar(50) NOT NULL,
+  `f11` varchar(50) NOT NULL,
+  `f12` varchar(50) NOT NULL,
+  `f13` varchar(50) NOT NULL,
+  `f14` varchar(50) NOT NULL,
+  `f15` varchar(50) NOT NULL,
+  `f16` varchar(50) NOT NULL,
+  `f17` varchar(50) NOT NULL,
+  `f18` varchar(50) NOT NULL,
+  `f19` varchar(50) NOT NULL,
+  `f20` varchar(50) NOT NULL,
+  `f21` varchar(50) NOT NULL,
+  `f22` varchar(50) NOT NULL,
+  `f23` varchar(50) NOT NULL,
+  `f24` varchar(50) NOT NULL,
+  `f25` varchar(50) NOT NULL,
+  `f26` varchar(50) NOT NULL,
+  `f27` varchar(50) NOT NULL,
+  `f28` varchar(50) NOT NULL,
+  `f29` varchar(50) NOT NULL,
+  `f30` varchar(50) NOT NULL,
+  PRIMARY KEY (`f0`)
+) ENGINE=InnoDB AUTO_INCREMENT=73 DEFAULT CHARSET=latin1 COMMENT='record_refrigerator_01_2011';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `_YYYY_MM_environmental_parameters`
+--
+
+LOCK TABLES `_YYYY_MM_environmental_parameters` WRITE;
+/*!40000 ALTER TABLE `_YYYY_MM_environmental_parameters` DISABLE KEYS */;
+INSERT INTO `_YYYY_MM_environmental_parameters` VALUES (1,'Monitoring','accomodation ','and ','environmental','conditions','','','Comment/Why not OK','','','','','','','','','','','','','','','','','','','','','',''),(2,'Section:Biochemistry','Location:Near Blood Bank','Month:06-2011','NCHSLS','New Civil Hosptial','Surat','','Staff Opinion/','','','','','','','','','','','','','','','','','','','','','',''),(3,'Day','Cleanliness OK/NotOK','Electrical functions OK/NotOK','Temperature/Humidity (C/%)','','Temperature/Humidity (C/%)','','Any other environmental NC','','','','','','','','','','','','','','','','','','','','','',''),(4,'===','==================','========================','(Morning)===============','Initials(Morning)==========','Evening==================','Initials(Evening)===========','as per quality manual======','','','','','','','','','','','','','','','','','','','','','',''),(41,'1','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(42,'2','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(43,'3','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(44,'4','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(45,'5','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(46,'6','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(47,'7','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(48,'8','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(49,'9','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(50,'10','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(51,'11','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(52,'12','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(53,'13','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(54,'14','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(55,'15','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(56,'16','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(57,'17','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(58,'18','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(59,'19','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(60,'20','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(61,'21','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(62,'22','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(63,'23','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(64,'24','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(65,'25','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(66,'26','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(67,'27','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(68,'28','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(69,'29','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(70,'30','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(71,'31','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(72,'32','','','','','','','','','','','','','','','','','','','','','','','','','','','','','');
+/*!40000 ALTER TABLE `_YYYY_MM_environmental_parameters` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `_YYYY_MM_equipment_log`
+--
+
+DROP TABLE IF EXISTS `_YYYY_MM_equipment_log`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `_YYYY_MM_equipment_log` (
+  `f0` int(11) NOT NULL AUTO_INCREMENT,
+  `f1` varchar(50) NOT NULL,
+  `f2` varchar(50) NOT NULL,
+  `f3` varchar(50) NOT NULL,
+  `f4` varchar(50) NOT NULL,
+  `f5` varchar(50) NOT NULL,
+  `f6` varchar(50) NOT NULL,
+  `f7` varchar(50) NOT NULL,
+  `f8` varchar(50) NOT NULL,
+  `f9` varchar(50) NOT NULL,
+  `f10` varchar(50) NOT NULL,
+  `f11` varchar(50) NOT NULL,
+  `f12` varchar(50) NOT NULL,
+  `f13` varchar(50) NOT NULL,
+  `f14` varchar(50) NOT NULL,
+  `f15` varchar(50) NOT NULL,
+  `f16` varchar(50) NOT NULL,
+  `f17` varchar(50) NOT NULL,
+  `f18` varchar(50) NOT NULL,
+  `f19` varchar(50) NOT NULL,
+  `f20` varchar(50) NOT NULL,
+  `f21` varchar(50) NOT NULL,
+  `f22` varchar(50) NOT NULL,
+  `f23` varchar(50) NOT NULL,
+  `f24` varchar(50) NOT NULL,
+  `f25` varchar(50) NOT NULL,
+  `f26` varchar(50) NOT NULL,
+  `f27` varchar(50) NOT NULL,
+  `f28` varchar(50) NOT NULL,
+  `f29` varchar(50) NOT NULL,
+  `f30` varchar(50) NOT NULL,
+  PRIMARY KEY (`f0`)
+) ENGINE=InnoDB AUTO_INCREMENT=102 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `_YYYY_MM_equipment_log`
+--
+
+LOCK TABLES `_YYYY_MM_equipment_log` WRITE;
+/*!40000 ALTER TABLE `_YYYY_MM_equipment_log` DISABLE KEYS */;
+INSERT INTO `_YYYY_MM_equipment_log` VALUES (1,'Biochemistry section','NCHSLS','NCH Surat','Equipment Log','Month:june -2011','','','','','','','','','','','','','','','','','','','','','','','','',''),(2,'Day','Miura-300','Erba XL-640','Centrifuge-1(HE-P51-EBLC-5162)','Centrifuge-2(HE-P50-DBLC-3586)','Centrifuge-3(HE-PHE-P50-HCLC-3959-BCLC 682)','Centrifuge-4(HE-P50-HCLC-3959)','Centrifuge-5()','Centrifuge-6()','Water Treatment plant','','','','','','','','','','','','','','','','','','','',''),(3,'Maintainence Contract(from)','1-09-2010','Warranty start()','16-02-2011','16-02-2011','16-02-2011','16-02-2011','Warranty start()','Warranty start()','Warranty start()','','','','','','','','','','','','','','','','','','','',''),(4,'Maintainence Contract(to)','31-08-2011','Warranty end()','15-02-2012','15-02-2012','15-02-2012','15-02-2012','Warranty end()','Warranty end()','Warranty end()','','','','','','','','','','','','','','','','','','','',''),(42,'1','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(43,'2','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(44,'3','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(45,'4','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(46,'5','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(47,'6','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(48,'7','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(49,'8','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(50,'9','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(51,'10','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(52,'11','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(53,'12','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(54,'13','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(55,'14','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(56,'15','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(57,'16','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(58,'17','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(59,'18','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(60,'19','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(61,'20','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(62,'21','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(63,'22','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(64,'23','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(65,'24','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(66,'25','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(67,'26','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(68,'27','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(69,'28','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(70,'29','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(71,'30','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''),(101,'31','','','','','','','','','','','','','','','','','','','','','','','','','','','','','');
+/*!40000 ALTER TABLE `_YYYY_MM_equipment_log` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `any_table`
+--
+
+DROP TABLE IF EXISTS `any_table`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `any_table` (
+  `f0` int(11) NOT NULL AUTO_INCREMENT,
+  `f1` varchar(50) NOT NULL,
+  `f2` varchar(50) NOT NULL,
+  `f3` varchar(50) NOT NULL,
+  `f4` varchar(50) NOT NULL,
+  `f5` varchar(50) NOT NULL,
+  `f6` varchar(50) NOT NULL,
+  `f7` varchar(50) NOT NULL,
+  PRIMARY KEY (`f0`)
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=latin1 COMMENT='record_refrigerator_01_2011';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `any_table`
+--
+
+LOCK TABLES `any_table` WRITE;
+/*!40000 ALTER TABLE `any_table` DISABLE KEYS */;
+INSERT INTO `any_table` VALUES (1,'','','','','','',''),(2,'','','','','','',''),(3,'','','','','','',''),(4,'','','','','','',''),(5,'','','','','','',''),(6,'','','','','','',''),(7,'','','','','','',''),(8,'','','','','','',''),(9,'','','','','','',''),(10,'','','','','','',''),(11,'','','','','','',''),(12,'','','','','','',''),(13,'','','','','','',''),(14,'','','','','','',''),(15,'','','','','','',''),(16,'','','','','','',''),(17,'','','','','','',''),(18,'','','','','','',''),(19,'','','','','','',''),(20,'','','','','','',''),(21,'','','','','','',''),(22,'','','','','','',''),(23,'','','','','','',''),(24,'','','','','','',''),(25,'','','','','','',''),(26,'','','','','','',''),(27,'','','','','','',''),(28,'','','','','','',''),(29,'','','','','','',''),(30,'','','','','','',''),(31,'','','','','','',''),(32,'','','','','','',''),(33,'','','','','','',''),(34,'','','','','','',''),(35,'','','','','','',''),(36,'','','','','','',''),(37,'','','','','','',''),(38,'','','','','','',''),(39,'','','','','','',''),(40,'','','','','','','');
+/*!40000 ALTER TABLE `any_table` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `biochemistry`
+--
+
+DROP TABLE IF EXISTS `biochemistry`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `biochemistry` (
+  `Date_of_entry` date NOT NULL,
+  `Remark` varchar(100) NOT NULL,
+  `Reagent_refilling_(morning)` varchar(20) NOT NULL,
+  `Internal_QC_CAL_Maintenance_ERBA_XL640_(morning)` varchar(20) NOT NULL,
+  `QC_Comment_Erba_XL640(Morning)` varchar(15) NOT NULL,
+  `Internal_QC_MUIRA_(morning)` varchar(20) NOT NULL,
+  `QC_Comment_Muira(Morning)` varchar(15) NOT NULL,
+  `HDL_QC_ERBA_XL640_(morning)` varchar(20) NOT NULL,
+  `Refrigerator_temperature_(morning)` varchar(20) NOT NULL,
+  `Environmental_Parameters_(morning)` varchar(20) NOT NULL,
+  `Equipment_log_(morning)` varchar(20) NOT NULL,
+  `External_QC(10-20)_(morning)` varchar(20) NOT NULL,
+  `Internal_QC_CAL_Maintenance_ERBA_XL640_(evening)` varchar(20) NOT NULL,
+  `QC_Comment_Erba_XL640(Evening)` varchar(15) NOT NULL,
+  `Internal_QC_MUIRA_(Evening)` varchar(20) NOT NULL,
+  `QC_Comment_Miura(Evening)` varchar(15) NOT NULL,
+  `Refrigerator_temperature_(Evening)` varchar(20) NOT NULL,
+  `Environmental_Parameters_(Evening)` varchar(20) NOT NULL,
+  `Reset_ID_(1)` varchar(10) NOT NULL,
+  `Print_IDs_Ward_OPD(25-30)` varchar(10) NOT NULL,
+  `Dutylist(25-30)` varchar(20) NOT NULL,
+  `Backup_checked` varchar(10) NOT NULL,
+  `Restored` varchar(10) NOT NULL,
+  `Turn_Around_Time` varchar(50) NOT NULL,
+  PRIMARY KEY (`Date_of_entry`),
+  CONSTRAINT `biochemistry_ibfk_1` FOREIGN KEY (`Date_of_entry`) REFERENCES `Date_of_entry` (`Date_of_entry`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `biochemistry`
+--
+
+LOCK TABLES `biochemistry` WRITE;
+/*!40000 ALTER TABLE `biochemistry` DISABLE KEYS */;
+INSERT INTO `biochemistry` VALUES ('0000-00-00','','','','','','','','','','','','','','','','','','','','','','',''),('2011-07-11','','yes','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','y','y','','','','Y','',''),('2011-07-12','','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','','','','Y','',''),('2011-07-13','','n','Y','Y','Y','Y','Y','Y','Y','y','Y','Y','Y','Y','Y','Y','Y','','','','Y','',''),('2011-07-14','','Y','Y','y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','','','','Y','',''),('2011-07-15','','Y','Y','y','Y','y','Y','Y','Y','Y','Y','y','y','y','y','y','y','','','','Y','',''),('2011-07-16','','y','y','y','y','y','y','y','y','y','y','y','y','y','y','y','y','','','','y','',''),('2011-07-17','','y','y','y','y','y','y','y','y','y','','y','y','y','y','y','y','','','','','',''),('2011-07-18','','Y','Y','Y','Y','Y','Y','Y','Y','Y','y','Y','Y','Y','Y','Y','Y','','','','Y','',''),('2011-07-19','','Y','Y','Y','Y','Y','y','Y','Y','y','y','','','','','','','','','','','',''),('2011-07-20','','Y','Y','Y','y','y','y','y','y','y','y','y','y','y','y','y','y','','','','y','',''),('2011-07-21','','Y','Y','y','y','y','y','Y','y','y','N','y','y','y','Y','y','y','','','','Y','',''),('2011-07-22','','y','y','y','y','y','y','y','y','y','y','y','y','y','y','y','y','','','','y','',''),('2011-07-23','','y','y','y','y\r\n','y','y','y','y','y','y calcium only','y','y','y','y','y','y','','','','y','','Y'),('2011-07-24','','y','y','y','n','n','y','y','y','y','n','y','y','y','y','y','y','','','','y','','Y'),('2011-07-25','','y','y','y','y','y','y','y','y','y','n','y','y','y','y','y','y','','','','y','','y'),('2011-07-26','','y','y','y','n','n','y','y','y','y','n','y','y','y','y','y','y','','','','y','','y'),('2011-07-27','','y','y','y','n','n','y','y','y','y','n','y','y','y','y','y','y','','','','y','','y'),('2011-07-28','','y','y','y','y','y','y','y','y','y','','','','','','','','','','','','',''),('2011-07-29','','y','y','y','n','n','y','y','y','y','n','y','y','y','y','y','y','','y','y','y','','y'),('2011-07-30','','Y','Y','Y','Not Done','Not Done','Y','Y','Y','Y','Not Done','','','','','','','','','','','','Y'),('2011-07-31','','y','y','y','y','y','y','y','y','y','y','y','y','y','y','y','y','','y','y','y','','y');
+/*!40000 ALTER TABLE `biochemistry` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `checklist_daily`
+--
+
+DROP TABLE IF EXISTS `checklist_daily`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `checklist_daily` (
+  `Date_of_entry` date NOT NULL,
+  `Remark` varchar(100) NOT NULL,
+  `Reagent_refilling_(morning)` varchar(20) NOT NULL,
+  `Internal_QC_CAL_Maintenance_ERBA_XL640_(morning)` varchar(20) NOT NULL,
+  `QC_Comment_Erba_XL640(Morning)` varchar(15) NOT NULL,
+  `Internal_QC_MUIRA_(morning)` varchar(20) NOT NULL,
+  `QC_Comment_Muira(Morning)` varchar(15) NOT NULL,
+  `HDL_QC_ERBA_XL640_(morning)` varchar(20) NOT NULL,
+  `Refrigerator_temperature_(morning)` varchar(20) NOT NULL,
+  `Environmental_Parameters_(morning)` varchar(20) NOT NULL,
+  `Equipment_log_(morning)` varchar(20) NOT NULL,
+  `External_QC(10-20)_(morning)` varchar(20) NOT NULL,
+  `Internal_QC_CAL_Maintenance_ERBA_XL640_(evening)` varchar(20) NOT NULL,
+  `QC_Comment_Erba_XL640(Evening)` varchar(15) NOT NULL,
+  `Internal_QC_MUIRA_(Evening)` varchar(20) NOT NULL,
+  `QC_Comment_Miura(Evening)` varchar(15) NOT NULL,
+  `Refrigerator_temperature_(Evening)` varchar(20) NOT NULL,
+  `Environmental_Parameters_(Evening)` varchar(20) NOT NULL,
+  `Reset_ID_(1)` varchar(10) NOT NULL,
+  `Print_IDs_Ward_OPD(25-30)` varchar(10) NOT NULL,
+  `Dutylist(25-30)` varchar(20) NOT NULL,
+  `Backup_checked` varchar(10) NOT NULL,
+  `Restored` varchar(10) NOT NULL,
+  `Turn_Around_Time` varchar(50) NOT NULL,
+  `Monthly_Total_Examination` varchar(20) NOT NULL,
+  PRIMARY KEY (`Date_of_entry`),
+  CONSTRAINT `checklist_daily_ibfk_1` FOREIGN KEY (`Date_of_entry`) REFERENCES `Date_of_entry` (`Date_of_entry`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `checklist_daily`
+--
+
+LOCK TABLES `checklist_daily` WRITE;
+/*!40000 ALTER TABLE `checklist_daily` DISABLE KEYS */;
+INSERT INTO `checklist_daily` VALUES ('0000-00-00','','y','y','y','y','y','y','y','y','y','n','y','y','y','y','y','y','','','','y','','y',''),('2011-07-15','','y','y','y','n','n','y','y','y','y','y','y','y','n','n','y','y','','','','y','','y',''),('2011-08-01','','y','y','y','y','y','y','y','y','y','','y','y','y','y','y','y','','','','y','','y',''),('2011-08-02','','y','y','y','y','y','y','y','y','y','','y','y','y','y','y','y','','','','y','','y',''),('2011-08-03','','Y','y','y','y','y','y','y','y','y','n','y','y','y','y','y','y','','','','y','','y,  Turn around time is out of range.\r\ndue to mach',''),('2011-08-04','','y','y','y','y','y','y','y','y','y','n','y','y','y','y','y','y','','','','y','','y,  Turn around time is out of range.',''),('2011-08-05','','y','y','y','y','y','y','y','y','y','n','y','y','y','y','y','y','','','','y','','y',''),('2011-08-06','','Y','Y','Y','y','y','Y','Y','Y','Y','n','y','y','y','y','y','y','','','','Y','','y',''),('2011-08-08','','y','y','y','y','y','N','y','y','y','','y','y','y','y','y','y','','','','','','y',''),('2011-08-09','','Y','Y','Y','N','N','Y','Y','Y','Y','N','','','','','','','','','','Y','','Y',''),('2011-08-10','','y','y','y','n','n','y','y','y','y','n','y','y','n','n','y','y','','','','y','','y',''),('2011-08-11','','y','y','Y','N','N','Y','Y','Y','Y','N','Y','Y','N','N','Y','Y','','','','Y','','Y',''),('2011-08-12','','y','y','y','electrolyt  QC  -Y','electrolyt  QC ','y','y','y','y','n','y','y','electrolyt  QC  -Y','electrolyt  QC ','y','y','','','','y','','y',''),('2011-08-13','','y','y','y','electrolyt  QC  -Y','electrolyt  QC ','Y','Y','Y','Y','N','Y','Y','ELECTROLYTE QC','ELECTROLYTE QC','Y','Y','','','','Y','','Y',''),('2011-08-14','','Y','Y','Y','ELECTROLYTE QC','ELECTROLYTE QC','Y','Y','Y','Y','N','','','','','','','','','','','','','');
+/*!40000 ALTER TABLE `checklist_daily` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `feedback_complain`
+--
+
+DROP TABLE IF EXISTS `feedback_complain`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `feedback_complain` (
+  `feedback_id` bigint(12) NOT NULL,
+  `name` varchar(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `designation` varchar(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `department` varchar(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `e_mail` varchar(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `quality_results` varchar(2) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `quality_reports` varchar(2) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `delivery_reports` varchar(2) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `attitude` varchar(2) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `response_promptness` varchar(2) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `response_urgent` varchar(2) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `satisfaction_ccl` varchar(2) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `satisfaction_tccl` varchar(2) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `feedback_complain` varchar(1500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `action` varchar(1500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `ip` varchar(15) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `feedback_complain`
+--
+
+LOCK TABLES `feedback_complain` WRITE;
+/*!40000 ALTER TABLE `feedback_complain` DISABLE KEYS */;
+INSERT INTO `feedback_complain` VALUES (1112171329,'','','Paedia','','','','','','','','','','CSF protein and sugar reports of trauma center laboratory are not proper','Method for CSF protein has been shifted from sulphosalicylic acid turbidimetry to pyrogallol red colorimetric & the method has been tested and found to give good results.',''),(1110291334,'','','','','7','7','9','8','8','7','9','8','thanks to ur brilliant and uptodate online reporting system. we as treating physicians feel a definite change in the pace of pt management. thaank you for the added convenience, look forward to many such positive changes that can have an impact on the quality of care we have to offer.\r\nMEDICINE E UNIT\r\nDEPT. OF MEDICINE\r\nSSGH VADODARA. ','',''),(1206041632,'ankita','resident doctor','pediatrics','','8','7','8','9','5','9','9','9','work is very good','','10.218.56.132'),(1207031617,'Dr.H.Patel','assistant professor','surgery','','8','8','9','8','9','7','8','9','work is excellent and beyond our imagination','','10.218.56.174'),(1207061244,'Dr.Sankalp','Resident Doctor','Medicine','','8','7','9','8','5','4','8','','Kindly do some provision for urgent tests and give the reports as early as possible.','','10.218.56.207'),(1207061246,'Dr.Bhumi','Resident Doctor','Pediatrics','','8','7','9','5','8','5','8','','Kindly do SGOT and ALP for all the patients with test request of LFT...........','','10.218.56.207'),(1207061247,'Dr.Krunal','Resident Doctor','Surgery','','8','9','8','5','5','5','8','','Work is good and satisfactory but request you to do entire LFT of all the patients with the request','','10.218.56.207'),(1207061259,'Dr.Mayur','Resident Doctor','Surgery','','7','8','9','5','6','4','','','PLease see to it that the urgent samples are processed as early as possible and give the reports early........................','','10.218.56.207'),(1207292142,'Dr. Hitesh',' Resident R3 ','Pediatrics','----','8','9','8','9','8','9','8','','Kindly make sure that the urgent reports are dispatched on time.','','10.218.56.171'),(1208031429,'Dr.Shivani','Resident R2','OG','---','9','9','9','9','10','9','9','','Very good work......but please do entire LFT of all patients\r\n............................','','10.218.56.170');
+/*!40000 ALTER TABLE `feedback_complain` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `item`
+--
+
+DROP TABLE IF EXISTS `item`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `item` (
+  `item_name` varchar(100) NOT NULL,
+  `unit` varchar(10) NOT NULL,
+  `register` varchar(50) NOT NULL,
+  `page_number` int(11) NOT NULL,
+  `details` varchar(500) NOT NULL,
+  PRIMARY KEY (`item_name`),
+  KEY `reg` (`register`),
+  CONSTRAINT `item_ibfk_1` FOREIGN KEY (`register`) REFERENCES `register` (`register`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `item`
+--
+
+LOCK TABLES `item` WRITE;
+/*!40000 ALTER TABLE `item` DISABLE KEYS */;
+INSERT INTO `item` VALUES ('8-Hydroxy Quinone','gm','hosp-consumable-01',29,'NA'),('Acetic acid glacial','ml','hosp-consumable-01',8,'NA'),('acid for cleaning','ml','hosp-consumable-01',5,'NA'),('Alkaline phosphatase','ml','hosp-consumable-01',1,'kit'),('Ammonium Persulphate','ml','hosp-consumable-01',23,'NA'),('Amylase','ml','hosp-consumable-01',16,'Erba'),('AVL OPTI-I BLOOD GAS ANALYSER ','Pieces','hosp-equipment-01',37,'Condemn it Bloody ABG'),('centrifuge machine','Pieces','hosp-equipment-01',48,'NA'),('EC-5 Plus V2','Pieces','hosp-equipment-01',3,'NA'),('EDTA-Disoidum AR','gm','hosp-consumable-01',24,'NA'),('ELECTROLYTE ANALYSER','Pieces','hosp-equipment-01',40,'NA'),('Hepatitis-B Vaccine','Pieces','hosp-consumable-01',22,'NA'),('Paraffine Film','Pieces','hosp-consumable-01',30,'NA'),('Printer[LASER PRINTER]','Pieces','hosp-equipment-01',20,'NA'),('Rubber holomat sheet','Pieces','hosp-consumable-01',13,'NA'),('SEMI Auto analyser  LOGOTECH','Pieces','hosp-equipment-01',11,'Junk condemn soon'),('SEMI Auto analyser STAR-21 plus.','Pieces','hosp-equipment-01',9,'NA'),('Simatzu Electronic Weight Balance','Pieces','hosp-equipment-01',21,'good keep clean'),('Sodium Banzoate','gm','hosp-consumable-01',14,'NA'),('Syringe + Needle','Pieces','hosp-consumable-01',25,'keep nil'),('TACHOMETER Digital','Pieces','hosp-equipment-01',26,'NA'),('Ultra-TSH','96 well ki','hosp-consumable-01',21,'NA'),('Weight calibration','Pieces','hosp-equipment-01',13,'NA');
+/*!40000 ALTER TABLE `item` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `master_record_of_equipment`
+--
+
+DROP TABLE IF EXISTS `master_record_of_equipment`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `master_record_of_equipment` (
+  `Name` varchar(100) NOT NULL,
+  `Serial_Number` varchar(25) NOT NULL,
+  `Unique_identity` varchar(50) NOT NULL,
+  `Manufacturer` varchar(200) NOT NULL,
+  `Manufacturer_contact_person` varchar(200) NOT NULL,
+  `Date_of_receipt_and_first_use` varchar(25) NOT NULL,
+  `Location` varchar(25) NOT NULL,
+  `New_or_used_on_receipt` varchar(10) NOT NULL,
+  `Manufacturer_instruction_for_its_retention` varchar(100) NOT NULL,
+  `Maintenance_calibration_performance_record` varchar(200) NOT NULL,
+  `Probable_replacement_date` varchar(25) NOT NULL,
+  PRIMARY KEY (`Unique_identity`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `master_record_of_equipment`
+--
+
+LOCK TABLES `master_record_of_equipment` WRITE;
+/*!40000 ALTER TABLE `master_record_of_equipment` DISABLE KEYS */;
+INSERT INTO `master_record_of_equipment` VALUES ('ERBA-XL-640','640051','Biochemistry: HOSP-EQ-P-10','TRANSASIA BIO-MEDICALS Ltd. ','MR.JITESH-9327110049\r\nMR.Manoj - 9327110109\r\nDI MR.Ganesh-7698219642','Receipt on :  1/6/11\r\nFir','Clinical Biochemistry Lab','New\r\n','No instruction Provided by manufacturer.','C/Records /File/21/Calibration records\r\nC/Records /File/22/Internal maintenance records. \r\nC/Records /File/23/External maintenance records.           \r\n','No provided'),('Deep freezer(-40)','','Biochemistry: HOSP-EQ-P-136','patel scientific company','PRAGNESHBHAI-9974564999','Receipt on :  \r\nFirst Use','Clinical Biochemistry Lab','New','No instruction Provided by manufacturer.\r\n','C/Records /File/21/Calibration records\r\nC/Records /File/22/Internal maintenance records. \r\nC/Records /File/23/External maintenance records.           \r\n','No provided'),('Shimadzu Analytic Balance\r\n','Biochemistry: HOSP-EQ-P-2','Biochemistry: HOSP-EQ-P-21Shimadzu Scientific Inst','Shimadzu Scientific Instruments INC\r\n7102,Riverwood Drive, Columbia, Maryland 21046, USA.\r\nPhone : 1(410)381-1227\r\nFax : 1(410)381-1222','-','Receipt on :  15/02/2010\r','Clinical Biochemistry Lab','New','No instruction Provided by manufacturer.','C/Records /File/21/Calibration records\r\nC/Records /File/22/Internal maintenance records. \r\nC/Records /File/23/External maintenance records.           \r\n','No provided'),('remi quick freezer(-20)','BDI-1943','Biochemistry: HOSP-EQ-P-35 ','REMI','PRAGNESHBHAI-9974564999','Receipt on :  10-6-11\r\nFi','Clinical Biochemistry Lab','New','No instruction Provided by manufacturer.','C/Records /File/21/Calibration records\r\nC/Records /File/22/Internal maintenance records. \r\nC/Records /File/23/External maintenance records.           \r\n','No provided'),('Prolyte Electrolyte Analyzer','81001755','Biochemistry: HOSP-EQ-P-40-81001755','Diamond Diagnostic Inc\r\n333 Fiske Street,\r\nHalliston, MA USA 01746.\r\nPhone :                   Fax :      \r\nEmail :','Pranavbhai: 09377294150\r\nVijaybhai:    09377294160\r\n\r\n','Receipt on :      /   /20','Clinical Biochemistry Lab','New','No instruction Provided by manufacturer.','C/Records /File/21/Calibration records\r\nC/Records /File/22/Internal maintenance records. \r\nC/Records /File/23/External maintenance records.           \r\n','No provided'),('Remi Centrifuge R-8C BL','BCLC - 682','Biochemistry: HOSP-EQ-P-50-BCLC-682','REMI Motors Ltd.\r\n14, Shah Indl Estate,\r\nVeera Desai Road,\r\nAndheri (W), Mumbai – 400053.\r\nINDIA.\r\nPhone : +91 250 2452027/28/29/35\r\nFax :      + 91 250 2454493\r\nEmail : remilab@vsnl.com\r\nWeb :  www.r','Ahmedabad Office Contact detain:\r\nTel : (079) 26403235 , 30942703\r\nFax : (079) 26464081\r\nEmail : remiahd@icenet.net','','Clinical Biochemistry Lab','New','No instruction Provided by manufacturer.','C/Records /File/21/Calibration records\r\nC/Records /File/22/Internal maintenance records. \r\nC/Records /File/23/External maintenance records.           \r\n','No provided'),('Remi Centrifuge R-8C dx','DBLC-682','Biochemistry: HOSP-EQ-P-50-DBLC-3586','REMI Motors Ltd.\r\n14, Shah Indl Estate,\r\nVeera Desai Road,\r\nAndheri (W), Mumbai – 400053.\r\nINDIA.\r\nPhone : +91 250 2452027/28/29/35\r\nFax :      + 91 250 2454493\r\nEmail : remilab@vsnl.com\r\nWeb :  www.r','Ahmedabad Office Contact detain:\r\nTel : (079) 26403235 , 30942703\r\nFax : (079) 26464081\r\nEmail : remiahd@icenet.net\r\nPRAGNESHBHAI-9974564999','Receipt on :  \r\nFirst Use','Clinical Biochemistry Lab','New','No instruction Provided by manufacturer.','C/Records /File/21/Calibration records\r\nC/Records /File/22/Internal maintenance records. \r\nC/Records /File/23/External maintenance records.           \r\n','No provided'),('Remi Centrifuge R-8C DQ','EBLC-5162','Biochemistry: HOSP-EQ-P-50-EBLC-5162','REMI Motors Ltd.\r\n14, Shah Indl Estate,\r\nVeera Desai Road,\r\nAndheri (W), Mumbai – 400053.\r\nINDIA.\r\nPhone : +91 250 2452027/28/29/35\r\nFax :      + 91 250 2454493\r\nEmail : remilab@vsnl.com\r\nWeb :  www.r','Ahmedabad Office Contact detain:\r\nTel : (079) 26403235 , 30942703\r\nFax : (079) 26464081\r\nEmail : remiahd@icenet.net\r\n\r\nPRAGNESHBHAI-9974564999','Receipt on :  \r\nFirst Use','Clinical Biochemistry Lab','New','No instruction Provided by manufacturer.\r\n','C/Records /File/21/Calibration records\r\n','No provided'),('Remi Centrifuge R-8C BL','HCLC - 3959','Biochemistry: HOSP-EQ-P-50-HCLC-3959','REMI Motors Ltd.\r\n14, Shah Indl Estate,\r\nVeera Desai Road,\r\nAndheri (W), Mumbai – 400053.\r\nINDIA.\r\nPhone : +91 250 2452027/28/29/35\r\nFax :      + 91 250 2454493\r\nEmail : remilab@vsnl.com\r\nWeb :  www.r','Ahmedabad Office Contact detain:\r\nTel : (079) 26403235 , 30942703\r\nFax : (079) 26464081\r\nEmail : remiahd@icenet.net\r\npragneshbhai-9974564999','Receipt on :  \r\nFirst Use','Clinical Biochemistry Lab','New','No instruction Provided by manufacturer.','C/Records /File/21/Calibration records\r\nC/Records /File/22/Internal maintenance records. \r\nC/Records /File/23/External maintenance records.           \r\n','No provided'),('Miura 300','A-1027','Biochemistry:hosp-eq-p-10-A1027','I.S.E.S.R.L,\r\nvia dell driadi,45.','mr.rubin-9979776053\r\nmr.pravin-9717669444','receipt on-8/3/2007\r\nfirs','clinical biochemistry lab','new','no instruction provided by manufacturer','','not provided'),('Remi research compfuge pr-23','VCDB-4174','Hospital Instrument Register Page 50\r\n','REMI Motors Ltd.\r\n14, Shah Indl Estate,\r\nVeera Desai Road,\r\nAndheri (W), Mumbai – 400053.\r\nINDIA.','PRAGNESHBHAI-9974564999','One Receipt on  : 10-6-20','Clinical Biochemistry Lab','New','No instruction Provided by manufacturer.\r\n','C/Records /File/21/Calibration records\r\nC/Records /File/22/Internal maintenance records. \r\nC/Records /File/23/External maintenance records.           \r\n','No instruction Provided b'),('Remi research compfuge pr-23','VCDB-4175','Hospital Instrument Register Page 50','REMI Motors Ltd.\r\n14, Shah Indl Estate,\r\nVeera Desai Road,\r\nAndheri (W), Mumbai – 400053.\r\nINDIA.','PRAGNESHBHAI-9974564999','One Receipt on  : 10/06/1','Clinical Biochemistry Lab','New','No instruction Provided by manufacturer.','C/Records /File/21/Calibration records\r\nC/Records /File/22/Internal maintenance records. \r\nC/Records /File/23/External maintenance records.           \r\n','No provided');
+/*!40000 ALTER TABLE `master_record_of_equipment` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `query`
+--
+
+DROP TABLE IF EXISTS `query`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `query` (
+  `query_id` int(11) NOT NULL AUTO_INCREMENT,
+  `table_name` varchar(50) NOT NULL,
+  `where_condition` varchar(1000) NOT NULL,
+  PRIMARY KEY (`query_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `query`
+--
+
+LOCK TABLES `query` WRITE;
+/*!40000 ALTER TABLE `query` DISABLE KEYS */;
+INSERT INTO `query` VALUES (12,'checklist_daily','where year(Date_of_entry)=year(sysdate()) and  month(Date_of_entry)=month(sysdate()) '),(15,'master_record_of_equipment',''),(17,'Nonconformity_Records',''),(18,'Calcium_calibration',''),(19,'Calcium_calibration','');
+/*!40000 ALTER TABLE `query` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `refrigerator`
+--
+
+DROP TABLE IF EXISTS `refrigerator`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `refrigerator` (
+  `refrigerator_id` varchar(50) NOT NULL,
+  PRIMARY KEY (`refrigerator_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `refrigerator`
+--
+
+LOCK TABLES `refrigerator` WRITE;
+/*!40000 ALTER TABLE `refrigerator` DISABLE KEYS */;
+INSERT INTO `refrigerator` VALUES ('(1)hosp_consumable_1_p_61_Godrej_300_liters'),('(2)hosp_consumable_1_p_33_Godrej_260_liters'),('Deep Freeze Patel Scientific'),('Deep Freeze Remi'),('hosp_consumable_1_p_33_Godrej_260_liters'),('hosp_consumable_1_p_61_Godrej_300_liters'),('xxxxx');
+/*!40000 ALTER TABLE `refrigerator` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `refrigerator_temperature`
+--
+
+DROP TABLE IF EXISTS `refrigerator_temperature`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `refrigerator_temperature` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `observation_id` int(11) NOT NULL,
+  `refrigerator_id` varchar(50) NOT NULL,
+  `temperature_centigrade` float NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `ri` (`refrigerator_id`,`observation_id`),
+  CONSTRAINT `refrigerator_temperature_ibfk_1` FOREIGN KEY (`refrigerator_id`) REFERENCES `refrigerator` (`refrigerator_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `refrigerator_temperature`
+--
+
+LOCK TABLES `refrigerator_temperature` WRITE;
+/*!40000 ALTER TABLE `refrigerator_temperature` DISABLE KEYS */;
+INSERT INTO `refrigerator_temperature` VALUES (1,2011050909,'hosp_consumable_1_p_61_Godrej_300_liters',4),(4,231213123,'(1)hosp_consumable_1_p_61_Godrej_300_liters',768),(8,45435,'(1)hosp_consumable_1_p_61_Godrej_300_liters',8),(9,43543,'(1)hosp_consumable_1_p_61_Godrej_300_liters',6),(10,4534543,'(1)hosp_consumable_1_p_61_Godrej_300_liters',68);
+/*!40000 ALTER TABLE `refrigerator_temperature` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `register`
+--
+
+DROP TABLE IF EXISTS `register`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `register` (
+  `register` varchar(50) NOT NULL,
+  PRIMARY KEY (`register`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `register`
+--
+
+LOCK TABLES `register` WRITE;
+/*!40000 ALTER TABLE `register` DISABLE KEYS */;
+INSERT INTO `register` VALUES ('hosp-consumable-01'),('hosp-deadstock-001'),('hosp-equipment-01'),('hosp-linen-001'),('hosp-service-001');
+/*!40000 ALTER TABLE `register` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `transaction`
+--
+
+DROP TABLE IF EXISTS `transaction`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `transaction` (
+  `transaction_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'no',
+  `item_name` varchar(100) NOT NULL,
+  `amount_requested` float DEFAULT NULL,
+  `request_id` varchar(100) DEFAULT NULL,
+  `amount_ordered` float NOT NULL,
+  `order_id` varchar(100) DEFAULT NULL,
+  `amount_indented` float NOT NULL,
+  `indent_id` varchar(50) DEFAULT NULL,
+  `amount_RcURtC` float NOT NULL,
+  `RcURtC` varchar(50) DEFAULT NULL,
+  `amount_registered` float NOT NULL,
+  `registered_date` varchar(50) DEFAULT NULL,
+  `amount_in_signed_bill` float NOT NULL,
+  `bill_id_signed` varchar(100) DEFAULT NULL,
+  `details` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`transaction_id`),
+  KEY `in` (`item_name`),
+  CONSTRAINT `transaction_ibfk_1` FOREIGN KEY (`item_name`) REFERENCES `item` (`item_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `transaction`
+--
+
+LOCK TABLES `transaction` WRITE;
+/*!40000 ALTER TABLE `transaction` DISABLE KEYS */;
+/*!40000 ALTER TABLE `transaction` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `version_log`
+--
+
+DROP TABLE IF EXISTS `version_log`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `version_log` (
+  `sr_no` int(5) NOT NULL AUTO_INCREMENT,
+  `date` varchar(30) NOT NULL,
+  `changes` varchar(400) NOT NULL,
+  PRIMARY KEY (`sr_no`)
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `version_log`
+--
+
+LOCK TABLES `version_log` WRITE;
+/*!40000 ALTER TABLE `version_log` DISABLE KEYS */;
+INSERT INTO `version_log` VALUES (1,'18-09-2012','LIS first implemented. Major changes: scope, send sample to MIURA, branding, daily report summary format, changes in report format, exclusion of functions not of present use'),(2,'07-10-2012','sample_id numbering formet changed from ddmmyyxxxx to yymmddxxxx'),(3,'xx-10-2012','optimization for CCL,SSGH. strftime functin for samle_id. QC shifted from MS Excel to LIS. \'QC other\' phps included.'),(4,'xx-11-2012','section of LIS for clinicians introduced for use. Feedback-complain form included. View feedback-complain included in lab portion of LIS. \'print_sample_doctor\' included in common.php'),(5,'xx-12-2012','Documents incorporated as a part of LIS.'),(6,'16-01-2012','Trauma center Clinical Chemistry Lab merged with Central Clinical Chemistry Lab. Urgent sample numbers \'yymmdd1xxx\' introduced.'),(7,'xx-01-2012','\'Directory structure\' function included. \'Laboratory Notice Board\' added.'),(8,'xx-02-2012','User name display and \'logout\' functions included. Incorrect \'login name\' or \'password\' warning included. Insert \'remote computer ip\' incorporated & table sample_trace made. ABG parameters incorporated in scope and report format for the same included.'),(9,'01-03-2012','\'Mark as verified\' function included to keep permanent record of signing authorities'),(10,'08-03-2012','Splitting of sample_id (6+4) using str_split($number,6) in print_sample & print_sample_doctor functions of common.php for easy reading'),(11,'08-03-2012','	\'Sample_id out of allowable range\' warning included for any out of date-range sample_id.'),(12,'14-04-2012','Introduced login_trace (time, login name and ip address) in the database biochemistry. Removed sample_trace (record of sample entry, user and ip)');
+/*!40000 ALTER TABLE `version_log` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2014-11-25  9:15:01
