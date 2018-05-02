@@ -1,0 +1,9 @@
+/* print.css */
+/* for use in signatory verification with simultaneous printing */
+
+#exclude1 {display:none} 	/* the element you do not want to print must have id="exclude1" */
+#report {position:static} 	/* the element you do want to print must have id="report" */ 
+
+
+
+
